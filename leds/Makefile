@@ -1,5 +1,5 @@
-filename = leds
-pcf_file = ./io.pcf
+filename = top
+pcf_file = io.pcf
 
 build:
 	yosys -p "synth_ice40 -top top -json $(filename).json" $(filename).v
@@ -13,4 +13,4 @@ prog_flash:
 	iceprog $(filename).bin
 
 clean:
-	rm -rf $(filename).blif $(filename).asc $(filename).bin
+	rm -rf $(filename).json $(filename).asc $(filename).bin
