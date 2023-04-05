@@ -21,7 +21,7 @@ module top(
 	output spi_cs,
 	output gpio_2
 );
-	assign spi_cs = 1; // it is necessary to turn off the SPI flash chip
+	// assign spi_cs = 1; // it is necessary to turn off the SPI flash chip
 	wire debug0 = gpio_2;
 
 	wire clk_48;
